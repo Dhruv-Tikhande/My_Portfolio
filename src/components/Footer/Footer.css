@@ -1,0 +1,77 @@
+.footer {
+  background-image: url('/Images/BlueDark2.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  color: var(--color-white);
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.footer__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.footer__copyright {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footer__copyright p {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.heart {
+  color: var(--color-error);
+  animation: heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat {
+  0% { transform: scale(1); }
+  14% { transform: scale(1.1); }
+  28% { transform: scale(1); }
+  42% { transform: scale(1.1); }
+  70% { transform: scale(1); }
+}
+
+.footer__links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer__link {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.footer__link:hover {
+  color: var(--color-white);
+}
+
+@media (max-width: 768px) {
+  .footer__content {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .footer__links {
+    gap: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer {
+    margin-left: 320px;
+  }
+}
