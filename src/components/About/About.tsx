@@ -71,7 +71,20 @@ const About: React.FC = () => {
                 different domains of technology. I believe in continuous learning and staying updated
                 with the latest trends in software development.
               </p>
-              
+              <div className="about__resume">
+                <a href="/Resume.pdf" download className="about-resume-btn">
+                  <svg viewBox="0 0 24 24" className="about-resume-icon">
+                    <path 
+                      d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      fill="none"
+                      strokeLinecap="round"
+                    />
+                  </svg>
+                  Download Resume
+                </a>
+              </div>
               <div className="about__stats">
                 <div className="stat">
                   <span className="stat__number">15+</span>

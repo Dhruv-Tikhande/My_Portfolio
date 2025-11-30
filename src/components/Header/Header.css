@@ -136,7 +136,7 @@
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.1); 
   color: var(--color-white);
   text-decoration: none;
   transition: all 0.3s ease;
@@ -149,6 +149,32 @@
 }
 
 .social-icon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+/* My Changes for Resume Button */
+.resume-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--color-white);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.resume-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.resume-btn .social-icon {
   width: 20px;
   height: 20px;
   fill: currentColor;

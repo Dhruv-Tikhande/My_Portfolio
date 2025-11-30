@@ -8,8 +8,8 @@ const Header: React.FC = () => {
 
   const navItems = [
     { id: 'hero', label: 'Home', icon: 'home' },
-    { id: 'portfolio', label: 'Projects', icon: 'briefcase' },
     { id: 'about', label: 'About', icon: 'user' },
+    { id: 'portfolio', label: 'Projects', icon: 'briefcase' },
     { id: 'contact', label: 'Contact', icon: 'mail' }
   ];
 
@@ -104,6 +104,16 @@ const Header: React.FC = () => {
                 <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
                 <rect x="2" y="9" width="4" height="12"/>
                 <circle cx="4" cy="4" r="2"/>
+              </svg>
+            </a>
+            <a 
+              href="/Resume.pdf" 
+              download 
+              className="resume-btn"
+              aria-label="Download Resume"
+            >
+              <svg viewBox="0 0 24 24" className="social-icon">
+                <path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round"/>
               </svg>
             </a>
           </div>
