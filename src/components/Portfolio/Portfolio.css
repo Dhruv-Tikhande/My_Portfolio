@@ -12,7 +12,8 @@
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 1rem;
-  color: var(--color-text);
+  color: #204f85;
+  /* color: var(--color-text); */
 }
 
 .portfolio__subtitle {

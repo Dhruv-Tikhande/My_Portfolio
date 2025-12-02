@@ -29,19 +29,19 @@ const Portfolio: React.FC = () => {
     },
     {
       id: 2,
-      title: 'Flight Management System',
-      description: 'Comprehensive flight management system with intuitive UI for booking, scheduling, and passenger management.',
-      image: 'https://images.pexels.com/photos/358319/pexels-photo-358319.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
-      category: 'software',
-      tags: ['Java', 'UI/UX', 'Database'],
+      title: 'Super Store Analysis System',
+      description: 'End-to-end analytics system for Super Store sales, combining ML-driven insights, and a modern React UI.',
+      image: '/Images/Store.png',
+      category: 'ml',
+      tags: ['Python','ML'],
       projectUrl: '#',
-      githubUrl: '#'
-    },
+      githubUrl: 'https://github.com/Dhruv-Tikhande/Super_Store_Analysis'
+    },    
     {
       id: 3,
       title: 'Diamond Price Prediction',
       description: 'Machine learning model for predicting diamond prices using regression algorithms and feature engineering.',
-      image: 'https://images.pexels.com/photos/1236701/pexels-photo-1236701.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
+      image: 'https://media.istockphoto.com/id/184303311/photo/three-beautiful-diamonds-on-a-black-background.jpg?s=612x612&w=0&k=20&c=_TUKoUkjTrsD78SHfFm4Oyy4r2RHv27-VczB-Zcxivo=',
       category: 'ml',
       tags: ['Python', 'ML', 'Regression'],
       projectUrl: '#',
@@ -51,7 +51,7 @@ const Portfolio: React.FC = () => {
       id: 4,
       title: 'Mushroom Classification',
       description: 'Classification model to identify edible vs poisonous mushrooms using various ML algorithms.',
-      image: 'https://images.pexels.com/photos/1618606/pexels-photo-1618606.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
+      image: 'https://media.istockphoto.com/id/621261052/photo/amanita-muscaria-family.jpg?s=612x612&w=0&k=20&c=mvATY1PM8SaY99rE_wo2lURjW-Ggf99cePP59Vp1-8o=',
       category: 'ml',
       tags: ['Python', 'Classification', 'Data Science'],
       projectUrl: '#',
@@ -59,13 +59,13 @@ const Portfolio: React.FC = () => {
     },
     {
       id: 5,
-      title: 'Unity Game Projects',
+      title: 'Unity Game Project - KickOff',
       description: 'Collection of interactive games built with Unity engine featuring 2D/3D gameplay mechanics.',
-      image: 'https://images.pexels.com/photos/1262304/pexels-photo-1262304.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
+      image: '/Images/KickOff.png',
       category: 'game',
       tags: ['Unity', 'C#', 'Game Dev'],
       projectUrl: '#',
-      githubUrl: '#'
+      githubUrl: 'https://github.com/Dhruv-Tikhande/KickOFF_UnityGame'
     },
     {
       id: 6,
@@ -74,8 +74,8 @@ const Portfolio: React.FC = () => {
       image: 'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
       category: 'web',
       tags: ['React', 'TypeScript', 'CSS'],
-      projectUrl: '#',
-      githubUrl: '#'
+      projectUrl: 'https://myportfolio-alpha-rosy.vercel.app/',
+      githubUrl: 'https://github.com/Dhruv-Tikhande/My_Portfolio'
     }
   ];
 

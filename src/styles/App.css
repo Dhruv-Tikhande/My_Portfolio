@@ -1,11 +1,15 @@
 /* CSS Variables for theming */
 :root {
   /* Colors */
-  --color-primary: #3b82f6;
-  --color-primary-light: #93c5fd;
-  --color-primary-dark: #1d4ed8;
+  --color-primary: #204f85;
+  --color-primary-light: rgba(32, 79, 133, 0.15);
+  --color-primary-dark: #15365c;
   --color-secondary: #10b981;
   --color-accent: #f59e0b;
+  /* --color-primary-light: #93c5fd;
+  --color-primary-dark: #1d4ed8;
+  --color-secondary: #10b981;
+  --color-accent: #f59e0b; */
   --color-success: #10b981;
   --color-error: #ef4444;
   --color-warning: #f59e0b;
@@ -141,6 +145,8 @@ a:hover {
   h6 { font-size: 1rem; }
 }
 
+/* New Scrollbar Styling */
+
 /* Scrollbar styling */
 ::-webkit-scrollbar {
   width: 8px;
@@ -148,19 +154,17 @@ a:hover {
 
 ::-webkit-scrollbar-track {
   background: #dfe3eb;
-  /* background: var(--color-background-alt); */
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #6b7c92;
-  /* background: var(--color-primary); */
+  background: #4c6a8c;  /* slightly lighter shade of #204f85 */
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #5a6b80;
-  /* background: var(--color-primary-dark); */
-}
+  background: #385074;
+} 
+
 
 /* Focus styles for accessibility */
 button:focus-visible,
