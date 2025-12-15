@@ -7,7 +7,7 @@ interface Project {
   title: string;
   description: string;
   image: string;
-  category: string;
+  categories: string[];
   tags: string[];
   projectUrl?: string;
   githubUrl?: string;
@@ -22,7 +22,7 @@ const Portfolio: React.FC = () => {
       title: 'AI-Powered Quiz Web App',
       description: 'Interactive quiz application powered by AI with dynamic question generation and real-time scoring.',
       image: 'https://images.pexels.com/photos/3862130/pexels-photo-3862130.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
-      category: 'web',
+      categories: ['web'],
       tags: ['JavaScript', 'AI', 'Web App'],
       projectUrl: '#',
       githubUrl: '#'
@@ -32,7 +32,7 @@ const Portfolio: React.FC = () => {
       title: 'Super Store Analysis System',
       description: 'End-to-end analytics system for Super Store sales, combining ML-driven insights, and a modern React UI.',
       image: '/Images/Store.png',
-      category: 'ml',
+      categories: ['ml','software','web'],
       tags: ['Python','ML'],
       projectUrl: '#',
       githubUrl: 'https://github.com/Dhruv-Tikhande/Super_Store_Analysis'
@@ -42,55 +42,55 @@ const Portfolio: React.FC = () => {
       title: 'Diamond Price Prediction',
       description: 'Machine learning model for predicting diamond prices using regression algorithms and feature engineering.',
       image: 'https://media.istockphoto.com/id/184303311/photo/three-beautiful-diamonds-on-a-black-background.jpg?s=612x612&w=0&k=20&c=_TUKoUkjTrsD78SHfFm4Oyy4r2RHv27-VczB-Zcxivo=',
-      category: 'ml',
+      categories: ['ml'],
       tags: ['Python', 'ML', 'Regression'],
       projectUrl: '#',
-      githubUrl: '#'
+      githubUrl: 'https://github.com/Dhruv-Tikhande/Diamond_Price_Prediction'
     },
     {
       id: 4,
       title: 'Mushroom Classification',
       description: 'Classification model to identify edible vs poisonous mushrooms using various ML algorithms.',
       image: 'https://media.istockphoto.com/id/621261052/photo/amanita-muscaria-family.jpg?s=612x612&w=0&k=20&c=mvATY1PM8SaY99rE_wo2lURjW-Ggf99cePP59Vp1-8o=',
-      category: 'ml',
+      categories: ['ml'],
       tags: ['Python', 'Classification', 'Data Science'],
       projectUrl: '#',
-      githubUrl: '#'
+      githubUrl: 'https://github.com/Dhruv-Tikhande/Mushroom_Edibility_Prediction'
     },
     {
       id: 5,
       title: 'Unity Game Project - KickOff',
       description: 'Collection of interactive games built with Unity engine featuring 2D/3D gameplay mechanics.',
       image: '/Images/KickOff.png',
-      category: 'game',
+      categories: ['game'],
       tags: ['Unity', 'C#', 'Game Dev'],
       projectUrl: '#',
       githubUrl: 'https://github.com/Dhruv-Tikhande/KickOFF_UnityGame'
     },
     {
       id: 6,
-      title: 'Personal Portfolio Website',
-      description: 'Modern, responsive portfolio website showcasing projects and skills with smooth animations.',
-      image: 'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
-      category: 'web',
-      tags: ['React', 'TypeScript', 'CSS'],
-      projectUrl: 'https://myportfolio-alpha-rosy.vercel.app/',
-      githubUrl: 'https://github.com/Dhruv-Tikhande/My_Portfolio'
-    }
+      title: 'Flight Management System',
+      description: 'A database-backed application to manage flights, passengers, bookings, and schedules with a clean UI and CRUD operations.',
+      image: 'https://images.pexels.com/photos/358319/pexels-photo-358319.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
+      categories: ['software'],
+      tags: ['Java', 'MySQL', 'GUI'],
+      projectUrl: '',
+      githubUrl: 'https://github.com/Dhruv-Tikhande/Flight-Management-System'
+    }    
   ];
 
   const categories = [
     { id: 'all', label: 'All Projects', count: projects.length },
-    { id: 'web', label: 'Web Apps', count: projects.filter(p => p.category === 'web').length },
-    { id: 'ml', label: 'ML & AI', count: projects.filter(p => p.category === 'ml').length },
-    { id: 'software', label: 'Software', count: projects.filter(p => p.category === 'software').length },
-    { id: 'game', label: 'Games', count: projects.filter(p => p.category === 'game').length }
+    { id: 'web', label: 'Web Apps', count: projects.filter(p => p.categories.includes('web')).length },
+    { id: 'ml', label: 'ML & AI', count: projects.filter(p => p.categories.includes('ml')).length },
+    { id: 'software', label: 'Software', count: projects.filter(p => p.categories.includes('software')).length },
+    { id: 'game', label: 'Games', count: projects.filter(p => p.categories.includes('game')).length }
   ];
 
   const filteredProjects = useMemo(() => {
     return activeFilter === 'all' 
       ? projects 
-      : projects.filter(project => project.category === activeFilter);
+      : projects.filter(project => project.categories.includes(activeFilter));
   }, [activeFilter, projects]);
 
   return (
