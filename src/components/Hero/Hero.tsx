@@ -8,10 +8,10 @@ const Hero: React.FC = () => {
   const [isDeleting, setIsDeleting] = useState(false);
   
   const texts = [
-    'Engineering student passionate about coding',
-    'AI & ML enthusiast building the future',
-    'Web developer creating digital experiences',
-    'Always learning, building, and innovating'
+    'Aspiring AI & Machine Learning Engineer',
+    'Building intelligent, data-driven solutions',
+    'React developer crafting modern web apps',
+    'Learning, building, and shipping real projects'
   ];
 
   useEffect(() => {

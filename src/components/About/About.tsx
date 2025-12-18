@@ -79,16 +79,25 @@ const About: React.FC = () => {
             
             <div className="about__text">
               <p className="about__description">
-                I'm a 3rd-year B.Tech IT student with a passion for technology and problem-solving.
-                My journey in tech has been driven by curiosity and a desire to create meaningful solutions
-                that make a real impact in the world.
+                I’m a 3rd-year B.Tech Information Technology student with a strong interest in
+                Artificial Intelligence, Machine Learning, and software development. I enjoy
+                solving problems by building practical, real-world applications using modern
+                technologies.
               </p>
               
               <p className="about__description">
-                From building AI-powered applications to developing interactive games, I love exploring
-                different domains of technology. I believe in continuous learning and staying updated
-                with the latest trends in software development.
+                My experience spans across AI-powered web applications, machine learning models,
+                and interactive game development using Unity. I focus on writing clean code,
+                understanding core concepts deeply, and continuously improving my skills by
+                building and deploying meaningful projects.
               </p>
+
+              <p className="about__description">
+                Currently, I am focused on strengthening my skills in machine learning,
+                full-stack development, and real-world project deployment, while actively
+                preparing for opportunities where I can learn, contribute, and grow as an engineer.
+              </p>
+
               <div className="about__resume">
                 <a href="/Resume.pdf" download className="about-resume-btn">
                   <svg viewBox="0 0 24 24" className="about-resume-icon">
@@ -110,11 +119,11 @@ const About: React.FC = () => {
                 </div>
                 <div className="stat">
                   <span className="stat__number">6+</span>
-                  <span className="stat__label">Technologies Mastered</span>
+                  <span className="stat__label">Core Technologies</span>
                 </div>
                 <div className="stat">
-                  <span className="stat__number">3</span>
-                  <span className="stat__label">Years Learning</span>
+                  <span className="stat__number">3+</span>
+                  <span className="stat__label">Years of Learning</span>
                 </div>
               </div>
             </div>
