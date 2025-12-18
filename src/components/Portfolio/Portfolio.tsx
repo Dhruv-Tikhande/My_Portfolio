@@ -1,5 +1,5 @@
 import React, { useState, useMemo, useEffect } from 'react';
-import { ExternalLink, Github, Filter, X } from 'lucide-react';
+import { Filter, X } from 'lucide-react';
 import './Portfolio.css';
 
 interface Project {
