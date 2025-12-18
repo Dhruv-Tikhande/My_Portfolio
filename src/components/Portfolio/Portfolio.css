@@ -236,3 +236,136 @@
     margin-left: 320px;
   }
 }
+
+
+.project-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-modal__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(6px);
+  animation: fadeIn 0.3s ease;
+}
+
+.project-modal__content {
+  position: relative;
+  width: 90%;
+  max-width: 1100px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 2rem;
+  z-index: 1;
+  animation: zoomInCenter 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: center;
+}
+
+@keyframes zoomInCenter {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+@keyframes scaleIn {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.project-modal__close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  border: none;
+  background: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.project-modal__layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.project-modal__media video,
+.project-modal__media img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.project-modal__info h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #204f85;
+}
+
+.project-modal__desc {
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+.project-modal__tags span {
+  display: inline-block;
+  margin: 0 0.5rem 0.5rem 0;
+  padding: 0.4rem 0.8rem;
+  background: #e8f0fb;
+  color: #204f85;
+  border-radius: 20px;
+  font-size: 0.85rem;
+}
+
+.project-modal__highlights {
+  margin: 1rem 0;
+  padding-left: 1.2rem;
+}
+
+.project-modal__highlights li {
+  margin-bottom: 0.5rem;
+}
+
+.project-modal__actions a {
+  display: inline-block;
+  margin-right: 1rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  background: #204f85;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.project-modal__actions a:hover {
+  opacity: 0.9;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .project-modal__layout {
+    grid-template-columns: 1fr;
+  }
+}
+

@@ -3,6 +3,24 @@ import { Code, Globe, Brain, Gamepad2, Database, PenTool } from 'lucide-react';
 import './About.css';
 
 const About: React.FC = () => {
+  const handleSkillClick = (skillTitle: string) => {
+    const skillToFilterMap: { [key: string]: string } = {
+      'AI & Machine Learning': 'ml',
+      'Web Development': 'web',
+      'Game Development': 'game',
+      'Database Management': 'software'
+    };
+    
+    const filterValue = skillToFilterMap[skillTitle] || 'all';
+    
+    window.dispatchEvent(new CustomEvent('skillFilterChange', { detail: { filter: filterValue } }));
+    
+    const portfolioSection = document.getElementById('portfolio');
+    if (portfolioSection) {
+      portfolioSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   const skills = [
     {
       icon: Code,
@@ -109,6 +127,7 @@ const About: React.FC = () => {
                 <div 
                   key={skill.title}
                   className="skill-card"
+                  onClick={() => handleSkillClick(skill.title)}
                   style={{ 
                     animationDelay: `${index * 0.1}s`,
                     '--skill-color': skill.color

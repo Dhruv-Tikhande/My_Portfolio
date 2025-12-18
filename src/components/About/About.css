@@ -12,7 +12,6 @@
   font-size: 3rem;
   font-weight: 700;
   color: #204f85;
-  /* color: var(--color-text); */
 }
 
 .about__content {
@@ -41,7 +40,7 @@
 .about__image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover; /* desktop behavior */
   transition: transform 0.3s ease;
 }
 
@@ -51,10 +50,7 @@
 
 .about__image-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   background: linear-gradient(
     135deg,
     rgba(59, 130, 246, 0.1),
@@ -99,7 +95,6 @@
   font-size: 2.5rem;
   font-weight: 700;
   color: #204f85;
-  /* color: var(--color-primary); */
   margin-bottom: 0.5rem;
 }
 
@@ -119,7 +114,6 @@
   text-align: center;
   margin-bottom: 3rem;
   color: #204f85;
-  /* color: var(--color-text); */
 }
 
 .skills__grid {
@@ -211,19 +205,19 @@
     gap: 3rem;
     text-align: center;
   }
-  
+
   .about__image {
     width: 250px;
-    height: 250px;
+    height: auto;              /* ✅ FIX */
   }
-  
+
+  .about__image img {
+    height: auto;              /* ✅ FIX */
+    object-fit: contain;       /* ✅ FIX */
+  }
+
   .skills__grid {
     grid-template-columns: 1fr;
-  }
-  
-  .about__stats {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
   }
 }
 
@@ -231,30 +225,36 @@
   .about {
     padding: 4rem 0;
   }
-  
+
   .about__title {
     font-size: 2.5rem;
   }
-  
+
   .skills__title {
     font-size: 2rem;
   }
-  
+
   .about__image {
-    width: 200px;
-    height: 200px;
+    width: 90%;
+    max-width: 280px;
+    height: auto;              /* ✅ FIX */
   }
-  
+
+  .about__image img {
+    height: auto;              /* ✅ FIX */
+    object-fit: contain;       /* ✅ FIX */
+  }
+
   .skill-card {
     padding: 1.5rem;
     gap: 1rem;
   }
-  
+
   .skill-card__icon {
     width: 50px;
     height: 50px;
   }
-  
+
   .about__stats {
     grid-template-columns: 1fr;
     gap: 1.5rem;
@@ -271,7 +271,7 @@
 .about__resume {
   margin-top: 2rem;
   display: flex;
-  justify-content: center; /* Or center if you want */
+  justify-content: center;
 }
 
 .about-resume-btn {
